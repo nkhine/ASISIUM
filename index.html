@@ -2,10 +2,25 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/client.css">
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="scripts/client.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+    $(function () {
+        var $overlay = $('<div class="ui-overlay"><div class="ui-widget-overlay"></div></div>').hide().appendTo('menu');
+        $overlay.fadeIn();
+
+        $(window).resize(function () {
+            $overlay.width($(document).width());
+            $overlay.height($(document).height());
+        });
+    });
+</script>
 </head>
 
 <body>

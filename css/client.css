@@ -1,9 +1,29 @@
 body {
-  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  background: #000000  url(../images/london.png) top center no-repeat;
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #000000;
 }
 
-#logo h1 { background: url(../images/asisium-logo.png) top left no-repeat; 
+
+.ui-widget-overlay {
+    background: repeat-x scroll 50% 50% #AAA;
+    opacity:0.3;
+}
+
+.ui-widget-overlay {
+    height:100%;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+#vis {
+  background: #000000  url(../images/london.png) top center no-repeat;
+  margin: 0px 15px 0px 12px;
+}
+
+#logo h1 { background: url(../images/asisium-logo.png) top left no-repeat;
+  position: absolute;
+  top: 10px;
   width: 104px; 
   height: 41px;
   z-index:10000;
@@ -24,7 +44,7 @@ body {
 #menu {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 25px;
   text-align: right;
 }
 
