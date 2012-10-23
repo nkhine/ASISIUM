@@ -1,4 +1,20 @@
-body {
-  background-image:url('/images/london.png');
-  background-color:#cccccc;
+body { background: #000000  url(/images/london.png) top center
+  no-repeat;}
+}
+
+#logo h1 {
+  position: relative;
+  background: #000000 url(/images/asisium-logo.png) top left no-repeat;
+  width: 104px;
+  height: 41px;
+}
+
+#logo h1 a {
+  width: 104px;
+  line-height: 41px;
+  display: block;
+  text-indent: -5000px;
+  text-decoration: none;
+  border: none;
+  background: none;
 }
