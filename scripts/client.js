@@ -34,6 +34,7 @@ function asisiumClient() {
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
+    icon.on("click", self.click);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('About')
@@ -51,6 +52,7 @@ function asisiumClient() {
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
+    icon.on("click", self.click);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('Services')
@@ -68,6 +70,7 @@ function asisiumClient() {
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
+    icon.on("click", self.click);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('Projects')
@@ -92,8 +95,13 @@ function asisiumClient() {
     iconName.attr("transform", "translate(" + 920 + "," + 28 + ")")
     iconName.attr('text-anchor', 'middle')
     iconName.attr("class", "icon-name");
+    icon.on("click", self.click);
   };
   
+  this.click = function () {
+    console.log('we made a click');
+    //$( "#dialog" ).dialog( "open" );
+  };
     // Load data from .json file
     //self.svg.selectAll("circle")
     //    .data(dataset)
