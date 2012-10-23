@@ -17,3 +17,46 @@ body { background: #000000  url(../images/london.png) top center no-repeat;}
 }
 
 #logo h1 a:hover {background:none;border:none;text-decoration: none;}
+
+#menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-align: right;
+}
+
+#menu ul {
+  float: right;
+  list-style: none;
+}
+
+#menu li {
+  float: left;
+  color: white;
+}
+
+#menu a {
+  float: left;
+  display: block;
+  color: #333;
+  border: 1px solid;
+  border-color: #FFFFFF;
+  background: #FFFFFF;
+  margin: 0 1px 0 0;
+  padding: 1px 8px;
+}
+
+#menu a:hover {color:#FFFFFF;padding-bottom:1px;background:#000000;border:1px solid;border-color:#000000;}
+
+#ft {
+  position: absolute;
+  top: 515px;
+  right: 15px;
+  text-align: right;
+}
+
+#ft p {
+  float: right;
+  color: #FFFFFF;
+  font-size: 77%;
+}
