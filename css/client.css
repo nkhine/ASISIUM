@@ -16,6 +16,10 @@ body {
     top:0;
     width:100%;
 }
+
+.icon-name {
+  font-color:#FFFFFF;
+}
 #vis {
   background: #000000  url(../images/london.png) top center no-repeat;
   margin: 0px 15px 0px 12px;
