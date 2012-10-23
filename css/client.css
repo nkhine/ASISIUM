@@ -1,12 +1,9 @@
-body { background: #000000  url(/images/london.png) top center
-  no-repeat;}
-}
+body { background: #000000  url(../images/london.png) top center no-repeat;}
 
-#logo h1 {
-  position: relative;
-  background: #000000 url(/images/asisium-logo.png) top left no-repeat;
-  width: 104px;
+#logo h1 { background: url(../images/asisium-logo.png) top left no-repeat; 
+  width: 104px; 
   height: 41px;
+  z-index:10000;
 }
 
 #logo h1 a {
@@ -18,3 +15,5 @@ body { background: #000000  url(/images/london.png) top center
   border: none;
   background: none;
 }
+
+#logo h1 a:hover {background:none;border:none;text-decoration: none;}
