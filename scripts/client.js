@@ -34,7 +34,7 @@ function asisiumClient() {
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.details);
+    icon.on("click", self.about);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('About')
@@ -42,7 +42,6 @@ function asisiumClient() {
     iconName.attr("transform", "translate(" + 300 + "," + 90 + ")")
     iconName.attr('text-anchor', 'middle')
     iconName.attr("class", "icon-name")
-    iconName.on("click", self.details);
   };
   
   this.drawServices = function () {
@@ -53,7 +52,7 @@ function asisiumClient() {
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.details);
+    icon.on("click", self.services);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('Services')
@@ -71,7 +70,7 @@ function asisiumClient() {
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.details);
+    icon.on("click", self.projects);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('Projects')
@@ -96,39 +95,82 @@ function asisiumClient() {
     iconName.attr("transform", "translate(" + 900 + "," + 80 + ")")
     iconName.attr('text-anchor', 'middle')
     iconName.attr("class", "icon-name");
-    icon.on("click", self.details);
+    icon.on("click", self.contact);
   };
-  
-  this.click = function () {
-    console.log('we made a click');
-    //$( "#dialog" ).dialog( "open" );
-  };
-    // Load data from .json file
-    //self.svg.selectAll("circle")
-    //    .data(dataset)
-    //    .enter().append("circle")
-    //    .style("stroke", "gray")
-    //    .style("fill", "white")
-    //    .attr("height", 40)
-    //    .attr("width", 75)
-    //    .attr("x", function(d, i){return i*80})
-    //    .attr("y", 20);
 
   // Overlay to display the content for each section
-  this.details = function() {
-    console.log('overlay opens');
-    $('.details').dialog({
+  this.about = function() {
+    $('.about').dialog({
       autoOpen: true,
       height: 370,
       width: 900,
       modal: true,
       position: ['center', 150],
-      //buttons: {
-      //  "": function() {}
-      //},
     });
   };
-
+  this.services = function() {
+    $('.about').dialog({
+      autoOpen: true,
+      height: 370,
+      width: 900,
+      modal: true,
+      position: ['center', 150],
+    });
+  };
+  this.projects = function() {
+    $('.projects').dialog({
+      autoOpen: true,
+      height: 370,
+      width: 900,
+      modal: true,
+      position: ['center', 150],
+    });
+  };
+  //this.contact = function() {
+  //  $('.contact').dialog({
+  //    autoOpen: true,
+  //    height: 370,
+  //    width: 900,
+  //    modal: true,
+  //    position: ['center', 150],
+  //    //buttons: {
+  //    //  "": function() {}
+  //    //},
+  //  });
+  //};
+  
+  
+  this.contact = function() {
+    $( "#contact-form" ).dialog({ 
+      autoOpen: true, 
+      height: 450, 
+      width: 500, 
+      modal: true, 
+      buttons: { 
+        "Send": function() { 
+          var bValid = true; 
+          allFields.removeClass( "ui-state-error" );
+          bValid = bValid && checkLength( email, "email", 6, 80 );
+          bValid = bValid && checkRegexp( email, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" ); 
+         
+          if ( bValid ) { 
+            $( "#messages tbody" ).append( "<tr>" + 
+            "<td>" + name.val() + "</td>" +  
+            "<td>" + email.val() + "</td>" +  
+            "<td>" + massage.val() + "</td>" + 
+            "</tr>" );  
+            $( this ).dialog( "close" ); 
+          } 
+        }, 
+        Cancel: function() { 
+          $( this ).dialog( "close" ); 
+        } 
+      }, 
+      close: function() { 
+        allFields.val( "" ).removeClass( "ui-state-error" ); 
+      } 
+    });
+  };
   // Initialise  
   this.init();
 };
