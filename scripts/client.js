@@ -29,19 +29,20 @@ function asisiumClient() {
   this.drawAbout = function () {
     var icon = self.svg.append("svg:path");
     icon.attr("d", iconPath);
-    icon.attr("transform", "translate(" + 310 + "," + 2 + ")")
+    icon.attr("transform", "translate(" + 310 + "," + 30 + ")")
     icon.style("fill", "white");
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.click);
+    icon.on("click", self.details);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('About')
     iconName.style("fill", "white")
-    iconName.attr("transform", "translate(" + 320 + "," + 25 + ")")
+    iconName.attr("transform", "translate(" + 320 + "," + 55 + ")")
     iconName.attr('text-anchor', 'middle')
-    iconName.attr("class", "icon-name");
+    iconName.attr("class", "icon-name")
+    iconName.on("click", self.details);
   };
   
   this.drawServices = function () {
@@ -52,12 +53,12 @@ function asisiumClient() {
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.click);
+    icon.on("click", self.details);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('Services')
     iconName.style("fill", "white")
-    iconName.attr("transform", "translate(" + 520 + "," + 25 + ")")
+    iconName.attr("transform", "translate(" + 520 + "," + 27 + ")")
     iconName.attr('text-anchor', 'middle')
     iconName.attr("class", "icon-name");
   };
@@ -65,17 +66,17 @@ function asisiumClient() {
   this.drawProjects = function () {
     var icon = self.svg.append("svg:path");
     icon.attr("d", iconPath);
-    icon.attr("transform", "translate(" + 710 + "," + -67 + ")")
+    icon.attr("transform", "translate(" + 710 + "," + -40 + ")")
     icon.style("fill", "white");
     icon.attr("class", "icon");
     icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
     icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.click);
+    icon.on("click", self.details);
 
     var iconName = self.svg.append("svg:text");
     iconName.text('Projects')
     iconName.style("fill", "white")
-    iconName.attr("transform", "translate(" + 720 + "," + -45 + ")")
+    iconName.attr("transform", "translate(" + 720 + "," + -15 + ")")
     iconName.attr('text-anchor', 'middle')
     iconName.attr("class", "icon-name");
   };
@@ -95,7 +96,7 @@ function asisiumClient() {
     iconName.attr("transform", "translate(" + 920 + "," + 28 + ")")
     iconName.attr('text-anchor', 'middle')
     iconName.attr("class", "icon-name");
-    icon.on("click", self.click);
+    icon.on("click", self.details);
   };
   
   this.click = function () {
@@ -113,8 +114,23 @@ function asisiumClient() {
     //    .attr("x", function(d, i){return i*80})
     //    .attr("y", 20);
 
-	// Initialise
-	this.init();
+  // Overlay to display the content for each section
+  this.details = function() {
+    console.log('overlay opens');
+    $('.details').dialog({
+      autoOpen: true,
+      height: 370,
+      width: 900,
+      modal: true,
+      position: ['center', 35],
+      //buttons: {
+      //  "": function() {}
+      //},
+    });
+  };
+
+  // Initialise  
+  this.init();
 };
 
 
