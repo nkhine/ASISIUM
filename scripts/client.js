@@ -30,7 +30,7 @@ function asisiumClient() {
   
   this.drawAbout = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 373 + "," + 89 + ")")
+      .attr("transform", "translate(" + 300 + "," + 89 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})
@@ -50,7 +50,7 @@ function asisiumClient() {
   };
   this.drawServices = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 598 + "," + 48 + ")")
+      .attr("transform", "translate(" + 526 + "," + 49 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})
@@ -70,7 +70,7 @@ function asisiumClient() {
   };
   this.drawProjects = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 817 + "," + 15 + ")")
+      .attr("transform", "translate(" + 746 + "," + 17 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})
@@ -90,7 +90,7 @@ function asisiumClient() {
   };
   this.drawContact = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 981 + "," + 77 + ")")
+      .attr("transform", "translate(" + 910 + "," + 79 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})

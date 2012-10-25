@@ -22,13 +22,13 @@ body {
 }
 #map {
   background: #000000  url(../images/london.png) top center no-repeat;
-  margin: 100px 15px 0px 15px;
+  margin: 120px 15px 0px 15px;
 }
 
 #logo h1 { background: url(../images/asisium-logo.png) top left no-repeat;
   position: absolute;
-  left:65px;
-  top: 120px;
+  left:5px;
+  top: 140px;
   width: 104px; 
   height: 41px;
   z-index:10000;
@@ -48,8 +48,8 @@ body {
 
 #ft {
   position: absolute;
-  bottom: 130px;
-  right: 80px;
+  bottom: 80px;
+  right: 20px;
   text-align: right;
 }
 
