@@ -1,11 +1,13 @@
 function asisiumClient() {
   var self = this;
   var iconPath = "M 0.14285728,7.9999996 C -5.3799908,7.9999996 -9.8571425,12.477152 -9.8571425,18 c 0,5.522847 4.4771517,10 9.99999978,10 C 5.6657051,28 10.142857,23.522847 10.142857,18 l 0,-0.09115 C 10.089477,12.424235 5.6277351,7.9999996 0.14285728,7.9999996 z m 0,4.7916664 c 2.85670682,0 5.18052982,2.299679 5.20833282,5.156251 l 0,0.05208 c 0,2.876483 -2.33185,5.208333 -5.20833282,5.208333 -2.87648308,0 -5.20833308,-2.33185 -5.20833308,-5.208333 0,-2.876483 2.33185,-5.208334 5.20833308,-5.208334 z";
-  var width = $("#menu").width(),
-    mapCanvasHeight = (width * 0.45);
-
+  var width = $("#map").width(),
+    mapCanvasHeight = (width * 0.38);
+  
+  var items = ['ABOUT', 'SERVICES', 'PROJECTS', 'CONTACT']
+  
   this.init = function() {
-    self.svg = d3.select("#menu").append("svg:svg")
+    self.svg = d3.select("#map").append("svg:svg")
       .attr("width", "100%").attr("height", mapCanvasHeight)
       .attr("viewBox", "0 0 " + width + " " + mapCanvasHeight);
 
@@ -27,75 +29,84 @@ function asisiumClient() {
   };
   
   this.drawAbout = function () {
-    var icon = self.svg.append("svg:path");
-    icon.attr("d", iconPath);
-    icon.attr("transform", "translate(" + 300 + "," + 90 + ")")
-    icon.style("fill", "white");
-    icon.attr("class", "icon");
-    icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
-    icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.about);
-
-    var iconName = self.svg.append("svg:text");
-    iconName.text('About')
-    iconName.style("fill", "white")
-    iconName.attr("transform", "translate(" + 300 + "," + 90 + ")")
-    iconName.attr('text-anchor', 'middle')
-    iconName.attr("class", "icon-name")
+    var iconHolder = self.svg.append('svg:g')
+      .attr("transform", "translate(" + 373 + "," + 89 + ")")
+      .attr("class", "icon-holder")
+      .style('opacity', 0.5)
+      .on("mouseover", function(){d3.select(this).style('opacity', 1);})
+      .on("mouseout", function(){d3.select(this).style('opacity', 0.5);})
+      .on("click", self.about);
+      
+    iconHolder.append("svg:text")
+      .text('ABOUT')
+      .style("fill", "white")
+      .attr('text-anchor', 'middle')
+      .attr("class", "icon-name");
+    
+    iconHolder.append("svg:path")
+      .attr("d", iconPath)
+      .style("fill", "white")
+      .attr("class", "icon");
   };
-  
   this.drawServices = function () {
-    var icon = self.svg.append("svg:path");
-    icon.attr("d", iconPath);
-    icon.attr("transform", "translate(" + 520 + "," + 50 + ")")
-    icon.style("fill", "white");
-    icon.attr("class", "icon");
-    icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
-    icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.services);
-
-    var iconName = self.svg.append("svg:text");
-    iconName.text('Services')
-    iconName.style("fill", "white")
-    iconName.attr("transform", "translate(" + 520 + "," + 50 + ")")
-    iconName.attr('text-anchor', 'middle')
-    iconName.attr("class", "icon-name");
+    var iconHolder = self.svg.append('svg:g')
+      .attr("transform", "translate(" + 598 + "," + 48 + ")")
+      .attr("class", "icon-holder")
+      .style('opacity', 0.5)
+      .on("mouseover", function(){d3.select(this).style('opacity', 1);})
+      .on("mouseout", function(){d3.select(this).style('opacity', 0.5);})
+      .on("click", self.services);
+      
+    iconHolder.append("svg:text")
+      .text('SERVICES')
+      .style("fill", "white")
+      .attr('text-anchor', 'middle')
+      .attr("class", "icon-name");
+    
+    iconHolder.append("svg:path")
+      .attr("d", iconPath)
+      .style("fill", "white")
+      .attr("class", "icon");
   };
-  
   this.drawProjects = function () {
-    var icon = self.svg.append("svg:path");
-    icon.attr("d", iconPath);
-    icon.attr("transform", "translate(" + 750 + "," + 20 + ")")
-    icon.style("fill", "white");
-    icon.attr("class", "icon");
-    icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
-    icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-    icon.on("click", self.projects);
-
-    var iconName = self.svg.append("svg:text");
-    iconName.text('Projects')
-    iconName.style("fill", "white")
-    iconName.attr("transform", "translate(" + 750 + "," + 20 + ")")
-    iconName.attr('text-anchor', 'middle')
-    iconName.attr("class", "icon-name");
+    var iconHolder = self.svg.append('svg:g')
+      .attr("transform", "translate(" + 817 + "," + 15 + ")")
+      .attr("class", "icon-holder")
+      .style('opacity', 0.5)
+      .on("mouseover", function(){d3.select(this).style('opacity', 1);})
+      .on("mouseout", function(){d3.select(this).style('opacity', 0.5);})
+      .on("click", self.projects);
+      
+    iconHolder.append("svg:text")
+      .text('PROJECTS')
+      .style("fill", "white")
+      .attr('text-anchor', 'middle')
+      .attr("class", "icon-name");
+    
+    iconHolder.append("svg:path")
+      .attr("d", iconPath)
+      .style("fill", "white")
+      .attr("class", "icon");
   };
-  
   this.drawContact = function () {
-    var icon = self.svg.append("svg:path");
-    icon.attr("d", iconPath);
-    icon.attr("transform", "translate(" + 900 + "," + 80 + ")")
-    icon.style("fill", "white");
-    icon.attr("class", "icon");
-    icon.on("mouseover", function(){d3.select(this).style("fill", "red");});
-    icon.on("mouseout", function(){d3.select(this).style("fill", "white");});
-
-    var iconName = self.svg.append("svg:text");
-    iconName.text('Contact')
-    iconName.style("fill", "white")
-    iconName.attr("transform", "translate(" + 900 + "," + 80 + ")")
-    iconName.attr('text-anchor', 'middle')
-    iconName.attr("class", "icon-name");
-    icon.on("click", self.contact);
+    var iconHolder = self.svg.append('svg:g')
+      .attr("transform", "translate(" + 981 + "," + 77 + ")")
+      .attr("class", "icon-holder")
+      .style('opacity', 0.5)
+      .on("mouseover", function(){d3.select(this).style('opacity', 1);})
+      .on("mouseout", function(){d3.select(this).style('opacity', 0.5);})
+      .on("click", self.contact);
+      
+    iconHolder.append("svg:text")
+      .text('CONTACT')
+      .style("fill", "white")
+      .attr('text-anchor', 'middle')
+      .attr("class", "icon-name");
+    
+    iconHolder.append("svg:path")
+      .attr("d", iconPath)
+      .style("fill", "white")
+      .attr("class", "icon");
   };
 
   // Overlay to display the content for each section
@@ -126,20 +137,7 @@ function asisiumClient() {
       position: ['center', 150],
     });
   };
-  //this.contact = function() {
-  //  $('.contact').dialog({
-  //    autoOpen: true,
-  //    height: 370,
-  //    width: 900,
-  //    modal: true,
-  //    position: ['center', 150],
-  //    //buttons: {
-  //    //  "": function() {}
-  //    //},
-  //  });
-  //};
-  
-  
+
   this.contact = function() {
     $( "#contact-form" ).dialog({ 
       autoOpen: true, 
