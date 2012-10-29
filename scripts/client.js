@@ -8,8 +8,8 @@ function asisiumClient() {
   
   this.init = function() {
     self.svg = d3.select("#map").append("svg:svg")
-      .attr("width", "100%").attr("height", mapCanvasHeight)
-      .attr("viewBox", "0 0 " + width + " " + mapCanvasHeight);
+      .attr("width", "100%").attr("height", mapCanvasHeight);
+      //.attr("viewBox", "0 0 " + width + " " + mapCanvasHeight);
 
     self.loadCopyright();
     self.drawAbout();
@@ -113,38 +113,38 @@ function asisiumClient() {
   this.about = function() {
     $('.about').dialog({
       autoOpen: true,
-      height: 370,
-      width: 900,
+      height: 350,
+      width: 400,
       modal: true,
-      position: ['center', 150],
+      position: [130, 180],
     });
   };
   this.services = function() {
-    $('.about').dialog({
+    $('.services').dialog({
       autoOpen: true,
-      height: 370,
-      width: 900,
+      height: 350,
+      width: 400,
       modal: true,
-      position: ['center', 150],
+      position: [350, 150],
     });
   };
   this.projects = function() {
     $('.projects').dialog({
       autoOpen: true,
-      height: 370,
-      width: 900,
+      height: 350,
+      width: 400,
       modal: true,
-      position: ['center', 150],
+      position: [550, 120],
     });
   };
 
   this.contact = function() {
     $( "#contact-form" ).dialog({ 
       autoOpen: true,
-      height: 370,
-      width: 900,
+      height: 350,
+      width: 400,
       modal: true,
-      position: ['center', 150],
+      position: [720, 170],
     });
   };
   // Initialise  
