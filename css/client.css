@@ -1,8 +1,7 @@
 body {
-  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   background: #000000;
 }
-
 
 .ui-widget-overlay {
     background: repeat-x scroll 50% 50% #AAA;
