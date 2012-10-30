@@ -30,7 +30,7 @@ function asisiumClient() {
   
   this.drawAbout = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 300 + "," + 89 + ")")
+      .attr("transform", "translate(" + 308 + "," + 89 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})
@@ -50,7 +50,7 @@ function asisiumClient() {
   };
   this.drawServices = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 526 + "," + 49 + ")")
+      .attr("transform", "translate(" + 533 + "," + 49 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})
@@ -70,7 +70,7 @@ function asisiumClient() {
   };
   this.drawProjects = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 746 + "," + 17 + ")")
+      .attr("transform", "translate(" + 752 + "," + 16 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})
@@ -90,7 +90,7 @@ function asisiumClient() {
   };
   this.drawContact = function () {
     var iconHolder = self.svg.append('svg:g')
-      .attr("transform", "translate(" + 910 + "," + 79 + ")")
+      .attr("transform", "translate(" + 915 + "," + 77 + ")")
       .attr("class", "icon-holder")
       .style('opacity', 0.5)
       .on("mouseover", function(){d3.select(this).style('opacity', 1);})
@@ -116,7 +116,7 @@ function asisiumClient() {
       height: 350,
       width: 400,
       modal: true,
-      position: [130, 180],
+      position: [130, 220],
     });
   };
   this.services = function() {
@@ -125,7 +125,7 @@ function asisiumClient() {
       height: 350,
       width: 400,
       modal: true,
-      position: [350, 150],
+      position: [350, 190],
     });
   };
   this.projects = function() {
@@ -134,7 +134,7 @@ function asisiumClient() {
       height: 350,
       width: 400,
       modal: true,
-      position: [550, 120],
+      position: [550, 160],
     });
   };
 
@@ -144,7 +144,7 @@ function asisiumClient() {
       height: 350,
       width: 400,
       modal: true,
-      position: [720, 170],
+      position: [720, 210],
     });
   };
   // Initialise  

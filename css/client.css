@@ -3,6 +3,12 @@ body {
   background: #000000;
 }
 
+
+div#container {
+  width: 1245px;
+  margin: 100px auto;
+}
+
 .ui-widget-overlay {
     background: repeat-x scroll 50% 50% #AAA;
     opacity:0.3;
@@ -45,19 +51,19 @@ body {
 }
 #map {
   background: #000000  url(../images/london.png) top center no-repeat;
-  margin: 60px 15px 0px 15px;
+  float:left;
+  width:100%;
 }
 
-#logo h1 { background: url(../images/asisium-logo.png) top left no-repeat;
-  position: absolute;
-  left:5px;
-  top: 85px;
+div#logo h1 { background: url(../images/asisium-logo.png) top left no-repeat;
+  float: left;
   width: 104px; 
   height: 41px;
+  margin: -435px 0 0 -20px;
   z-index:10000;
 }
 
-#logo h1 a {
+div#logo h1 a {
   width: 104px;
   line-height: 41px;
   display: block;
@@ -69,15 +75,12 @@ body {
 
 #logo h1 a:hover {background:none;border:none;text-decoration: none;}
 
-#ft {
-  position: absolute;
-  top: 520px;
-  right: 20px;
-  text-align: right;
+div#ft {
+float: right;
+margin: -10px auto;
 }
 
-#ft p {
-  float: right;
+div#ft p {
   color: #FFFFFF;
   font-size: 77%;
 }
