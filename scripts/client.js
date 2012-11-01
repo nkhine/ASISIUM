@@ -131,11 +131,12 @@ function asisiumClient() {
   this.projects = function() {
     $('.projects').dialog({
       autoOpen: true,
-      height: 350,
-      width: 400,
+      height: 370,
+      width: 655,
       modal: true,
-      position: [550, 160],
+      position: [450, 160],
     });
+    $("#tabs").tabs().removeClass('ui-widget-content');
   };
 
   this.contact = function() {

@@ -3,7 +3,6 @@ body {
   background: #000000;
 }
 
-
 div#container {
   width: 1245px;
   margin: 100px auto;
@@ -45,6 +44,10 @@ div#container {
 .ui-dialog-content {
   color:#FFFFFF;
   font-size: 77%;
+}
+
+.ui-widget-content {
+  color:#FFFFFF;
 }
 .icon-name {
   font-color:#FFFFFF;
