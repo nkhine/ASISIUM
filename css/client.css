@@ -49,8 +49,12 @@ div#container {
   color:#FFFFFF;
 }
 .icon-name {
-  font-color:#FFFFFF;
+  font-size:12px;
+  font-weight:bold;
 }
+
+.ui-tabs-anchor { outline: none; }
+
 #map {
   background: #000000  url(../images/london.png) top center no-repeat;
   float:left;
